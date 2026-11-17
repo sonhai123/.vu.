@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giới thiệu bản thân - Bùi Hoàng Vũ</title>
+
+    <style>
+        /* Cài đặt chung */
+        body {
+            margin: 0;
+            background-color: #fff9f2;
+            font-family: Arial, sans-serif;
+            color: #44352c;
+        }
+
+        /* Đầu trang */
+        header {
+            background-color: #f8e9d8;
+            padding: 25px 40px;
+        }
+
+        header h1 {
+            color: #a85e32;
+            font-size: 38px;
+        }
+
+        header p {
+            color: #806d60;
+            font-size: 20px;
+        }
+
+        /* Thanh menu */
+        nav {
+            background-color: #eac8a8;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #704326;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 17px;
+        }
+
+        /* Phần giới thiệu */
+        .gioithieu {
+            padding: 70px 40px;
+            background-color: #fff3e6;
+        }
+
+        .gioithieu h2 {
+            color: #a85e32;
+            font-size: 35px;
+        }
+
+        /* Các phần nội dung */
+        section {
+            padding: 40px;
+            min-height: 200px;
+            border-bottom: 1px solid #ead9c9;
+        }
+
+        section h2 {
+            color: #a85e32;
+            font-size: 28px;
+        }
+
+        section p {
+            font-size: 19px;
+            line-height: 1.8;
+        }
+
+        /* Nút liên hệ */
+        .nut {
+            display: inline-block;
+            padding: 13px 25px;
+            margin: 10px 10px 10px 0;
+            background-color: #c77b45;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 17px;
+        }
+
+        .nut:hover {
+            background-color: #a85e32;
+        }
+
+        /* Chân trang */
+        footer {
+            background-color: #f8e9d8;
+            padding: 25px;
+            text-align: center;
+            color: #806d60;
+        }
+
+        /* ========================================= */
+        /* CSS CHO PHẦN CHÈN 2 BỨC ẢNH */
+        /* ========================================= */
+        .gallery-container {
+            display: flex;
+            gap: 20px; /* Khoảng cách giữa 2 ảnh */
+            justify-content: center; /* Căn giữa 2 ảnh */
+            margin-top: 25px;
+            flex-wrap: wrap; /* Tự động xuống dòng nếu màn hình quá nhỏ */
+        }
+
+        .gallery-container img {
+            width: 45%; /* Mỗi ảnh chiếm khoảng 45% chiều rộng */
+            max-width: 400px;
+            height: 300px;
+            object-fit: cover; /* Cắt ảnh vuông vắn, không bị méo */
+            border-radius: 12px;
+            border: 4px solid #eac8a8; /* Viền màu be giống thanh menu */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.03); /* Phóng to nhẹ khi rê chuột */
+            border-color: #c77b45; /* Đổi viền sang màu cam đất giống nút */
+        }
+
+        /* ========================================= */
+        /* CSS MỚI CHO KHUNG VIDEO v1.mp4 */
+        /* ========================================= */
+        .khung-video {
+            max-width: 720px;
+            margin: 25px auto 0;
+            background-color: #f8e9d8;
+            padding: 10px;
+            border-radius: 12px;
+            border: 4px solid #eac8a8;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .khung-video video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            background-color: #000;
+        }
+
+        /* Hiển thị trên điện thoại */
+        @media (max-width: 600px) {
+            header, section, .gioithieu {
+                padding: 25px 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+                font-size: 15px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            /* Trên điện thoại, ảnh xếp dọc và chiếm toàn bộ chiều rộng */
+            .gallery-container img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Đầu trang -->
+    <header>
+        <h1>Bùi Hoàng Vũ</h1>
+        <p>Trang web giới thiệu bản thân</p>
+    </header>
+
+    <!-- Thanh menu -->
+    <nav>
+        <a href="#trangchu">Trang chủ</a>
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#sothich">Sở thích</a>
+        <a href="#quan-diem">Quan điểm</a>
+        <a href="#lienhe">Liên hệ</a>
+    </nav>
+
+    <!-- Trang chủ -->
+    <div class="gioithieu" id="trangchu">
+        <h2>Xin chào!</h2>
+        <h2>Mình là Bùi Hoàng Vũ</h2>
+
+        <p>
+            Chào mừng bạn đến với góc nhỏ của mình!
+            Đây là nơi lưu giữ những thông tin,
+            sở thích và một vài điều thú vị về bản thân.
+        </p>
+    </div>
+
+    <!-- Phần 1 -->
+    <section id="gioithieu">
+        <h2>01. Thông tin cá nhân</h2>
+
+        <p>Họ và tên: Bùi Hoàng Vũ</p>
+        <p>Ngày sinh: 18/11/2009</p>
+        <p>Số điện thoại: 0365582825</p>
+        <p>Email: buihoangvuthai@gmail.com</p>
+    </section>
+
+    <!-- Phần 2 -->
+    <section>
+        <h2>02. Một chút về mình</h2>
+
+        <p>
+            Mình là người thích sự thoải mái,
+            không quá cầu kỳ nhưng luôn muốn
+            mọi thứ xung quanh trở nên thú vị.
+        </p>
+
+        <p>
+            Mình thích những cuộc trò chuyện vui vẻ,
+            những trải nghiệm mới và những khoảnh khắc
+            đáng nhớ bên bạn bè.
+        </p>
+    </section>
+
+    <!-- Phần 3 -->
+    <section id="sothich">
+        <h2>03. Sở thích cá nhân</h2>
+
+        <p>
+            Mình thích chụp ảnh, khám phá những góc
+            chụp đẹp và lưu lại những khoảnh khắc
+            trong cuộc sống.
+        </p>
+
+        <p>
+            Ngoài ra, mình còn thích nghe nhạc,
+            xem phim, tìm hiểu những điều thú vị
+            trên Internet và dành thời gian
+            cho những người bạn thân thiết.
+        </p>
+
+        <!-- CHÈN 2 BỨC ẢNH VÀO ĐÂY -->
+        <div class="gallery-container">
+            <!-- Nhớ để file ảnh a1.jpg và a2.jpg cùng thư mục với file HTML này -->
+            <img src="a1.jpg" alt="Khoảnh khắc của Bùi Hoàng Vũ 1">
+            <img src="a2.jpg" alt="Khoảnh khắc của Bùi Hoàng Vũ 2">
+        </div>
+
+        <!-- CHÈN VIDEO v1.mp4 VÀO ĐÂY -->
+        <div class="khung-video">
+            <video src="v1.mp4" controls poster="a1.jpg" preload="metadata">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+        </div>
+
+    </section>
+
+    <!-- Phần 4 -->
+    <section id="quan-diem">
+        <h2>04. Điều mình quan tâm</h2>
+
+        <p>
+            Mình luôn muốn có thêm nhiều trải nghiệm,
+            gặp gỡ những người mới và khám phá
+            những điều chưa từng biết.
+        </p>
+
+        <p>
+            Mình tin rằng những kỷ niệm đẹp
+            và những người bạn tốt là một phần
+            rất đáng quý của tuổi trẻ.
+        </p>
+    </section>
+
+    <!-- Phần 5 -->
+    <section>
+        <h2>05. Kế hoạch tương lai</h2>
+
+        <p>
+            Mình muốn học hỏi thêm nhiều kiến thức,
+            cải thiện bản thân và từng bước
+            tiến gần hơn đến những mục tiêu của mình.
+        </p>
+
+        <p>
+            Hy vọng tương lai sẽ có thật nhiều
+            cơ hội để trải nghiệm và trưởng thành.
+        </p>
+    </section>
+
+    <!-- Phần liên hệ -->
+    <section id="lienhe">
+        <h2>06. Kết nối với mình</h2>
+
+        <p>
+            Nếu muốn liên hệ hoặc trò chuyện,
+            bạn có thể tìm mình qua những đường dẫn dưới đây.
+        </p>
+
+        <p>
+            Gmail: buihoangvuthai@gmail.com
+        </p>
+
+        <p>
+            Facebook: Bùi Hoàng Vũ
+        </p>
+
+        <!-- Nút Gmail -->
+        <a class="nut"
+           href="mailto:buihoangvuthai@gmail.com">
+            Gmail
+        </a>
+
+        <!-- Nút Facebook -->
+        <a class="nut"
+           href="https://www.facebook.com/bui.hoangvu.353/"
+           target="_blank">
+            Facebook
+        </a>
+
+        <!-- Nút gọi điện -->
+        <a class="nut"
+           href="tel:0365582825">
+            Gọi điện
+        </a>
+
+    </section>
+
+    <!-- Chân trang -->
+    <footer>
+        <p>© 2026 - Website giới thiệu bản thân</p>
+        <p>Made with passion by Bùi Hoàng Vũ</p>
+    </footer>
+
+</body>
+</html>
